@@ -1,8 +1,20 @@
+
+// Definition for singly-linked list.
+class ListNode {
+  int val;
+  ListNode next;
+
+  ListNode(int x) {
+    val = x;
+    next = null;
+  }
+}
+
 class IntersectionOfTwoLists {
 
   public int getListLength(ListNode head) {
     int length = 0;
-    while(head != null) {
+    while (head != null) {
       length++;
       head = head.next;
     }
@@ -13,17 +25,17 @@ class IntersectionOfTwoLists {
     int lengthA = getListLength(headA);
     int lengthB = getListLength(headB);
 
-    while(lengthA > lengthB) {
+    while (lengthA > lengthB) {
       lengthA--;
       headA = headA.next;
     }
 
-    while(lengthB > lengthA) {
+    while (lengthB > lengthA) {
       lengthB--;
       headB = headB.next;
     }
 
-    while(headA != headB) {
+    while (headA != headB) {
       headA = headA.next;
       headB = headB.next;
     }
