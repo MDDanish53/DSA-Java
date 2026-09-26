@@ -1,4 +1,4 @@
-class Solution {
+class CoinChange {
   public int coinChange(int[] coins, int amount) {
 
     if (amount < 1)
